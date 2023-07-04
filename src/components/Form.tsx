@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { convertToUpperCase } from "../utils/uppercase";
+import { Button } from "./Button";
 import { Input } from "./Input";
 
 export function Form({ onSubmit }: { onSubmit: (value: string) => void }) {
@@ -13,7 +14,7 @@ export function Form({ onSubmit }: { onSubmit: (value: string) => void }) {
   return (
     <form onSubmit={handleSubmit}>
       <Input value={value} onChange={setValue} />
-      <button type="submit">Submit</button>
+      <Button type="submit">Submit</Button>
     </form>
   );
 }
